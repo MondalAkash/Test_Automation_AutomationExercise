@@ -13,7 +13,11 @@ public class HomePage {
     public static By slider3ChangeButton = By.xpath("//section[@id='slider']//li[3]");
     public static By slider3Text = By.xpath("//div[@class='item active']//h2[contains(text(),'Full-Fledged practice website for Automation Engin')]");
     public static By homeItem = By.xpath("//a[normalize-space()='Home']");
-    public static boolean checkLogoVisibility()
+    public static By viewProduct = By.xpath("//div[@class='col-sm-9 padding-right']//div[2]//div[1]//div[2]//ul[1]//li[1]//a[1]");
+    public static By addToCart = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[1]/div[1]/a");
+    public static By continueShoppingButton = By.xpath("//button[normalize-space()='Continue Shopping']");
+    public static By cartButton = By.xpath("//a[normalize-space()='Cart']");
+        public static boolean checkLogoVisibility()
     {
         return ElementActions.visibilityCheck(logo);
     }
@@ -45,4 +49,21 @@ public class HomePage {
     {
         ElementActions.clickOnItem(slider3ChangeButton);
     }
+    public static void clickOnViewProductButton()
+    {
+        ElementActions.clickOnItem(viewProduct);
+    }
+    public static void clickOnAddToCartButton()
+    {
+        ElementActions.clickOnItem(addToCart);
+    }
+    public static void clickOnContinueShoppingButton()
+    {
+        ElementActions.clickOnItem(continueShoppingButton);
+    }
+    public static void clickOnCartButton()
+    {
+        ElementActions.clickOnItem(cartButton);
+    }
+
 }
